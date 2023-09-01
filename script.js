@@ -38,7 +38,7 @@ async function fetchSpritesByGeneration(generation) {
   
   // Función para obtener el estado almacenado en sessionStorage
   function getSavedState() {
-    const savedState = sessionStorage.getItem('pokemonState');
+    const savedState = localStorage.getItem('pokemonState');
   
     if (savedState) {
       return JSON.parse(savedState);
@@ -59,7 +59,7 @@ async function fetchSpritesByGeneration(generation) {
       coloredPkms: coloredPkms
     };
   
-    sessionStorage.setItem('pokemonState', JSON.stringify(state));
+    localStorage.setItem('pokemonState', JSON.stringify(state));
   }
   
   // Función para obtener las imágenes y mostrarlas en la ventana
